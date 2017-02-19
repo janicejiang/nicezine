@@ -1,3 +1,20 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.fonttype {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+}
+
+.add_padding {
+    padding: 70px 70px;
+}
+
+.bg-1 {
+    background-color: #F8F8F8;
+}

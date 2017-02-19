@@ -16,3 +16,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.alert {
+  border-radius: 0;
+}
