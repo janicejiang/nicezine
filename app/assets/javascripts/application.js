@@ -16,4 +16,5 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap/carousel
+//= require bootstrap/modal
 //= require_tree .
