@@ -17,8 +17,8 @@
               <% end %>
             </li>
             <% if !current_user %>
-            <li><a href="#" data-toggle="modal" data-target="#signup-modal">注册</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#login-modal">登入</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#signup-modal">Sign up</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
             <!-- <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li> -->
             <% else %>
             <li class="dropdown">
@@ -29,13 +29,13 @@
               <ul class="dropdown-menu">
                 <% if current_user.admin? %>
                 <li>
-                  <%= link_to("Admin 选单", admin_products_path ) %>
+                  <%= link_to("Admin Panel", admin_products_path ) %>
                 </li>
                 <% end %>
                 <li>
                   <%= link_to("个人订单列表", account_orders_path ) %>
                 </li>
-                <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
+                <li> <%= link_to(content_tag(:i, 'Logout', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
               </ul>
             </li>
             <% end %>

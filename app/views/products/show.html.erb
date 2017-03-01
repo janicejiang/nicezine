@@ -20,7 +20,7 @@
           <br>
           <div>
             <% if @product.quantity.present? && @product.quantity > 0 %>
-            <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-default btn-lg") %>
+            <%= link_to("Add to Cart", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-default") %>
             <% else %>
             Sold Out
             <% end %>
