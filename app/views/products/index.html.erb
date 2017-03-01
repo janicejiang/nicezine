@@ -13,30 +13,34 @@
     </div>
   <% end %>
 </div> -->
-<br>
-<h1 align="center">take time to read and touch</h1>
-<div align="center">
-  <div class="wrapper" >
-    <div class="row">
-      <% @products.each do |product| %>
-        <div class="col-xs-3">
-          <div class="magazine">
-          <%= link_to product_path(product) do %>
-            <h3 class="h3_title"><%= product.title %></h3>
-          <% end %>
-          <p class="summary">
-            <%= product.description %>
-          </p>
-          <%= link_to product_path(product) do %>
-            <% if product.image.present? %>
-              <%= image_tag(product.image.rectangle.url, class: "rectangle shadow") %>
-            <% else %>
-              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-            <% end %>
+<section id="products">
+  <div class="wrapper">
+    <br>
+    <h1 align="center">take time to read and touch</h1>
+    <div align="center">
+      <div class="content" >
+        <div class="row">
+          <% @products.each do |product| %>
+            <div class="col-xs-3">
+              <div class="magazine">
+              <%= link_to product_path(product) do %>
+                <h3 class="h3_title"><%= product.title %></h3>
+              <% end %>
+              <p class="summary">
+                <%= product.description %>
+              </p>
+              <%= link_to product_path(product) do %>
+                <% if product.image.present? %>
+                  <%= image_tag(product.image.rectangle.url, class: "rectangle shadow") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                <% end %>
+              <% end %>
+            </div>
+            </div>
           <% end %>
         </div>
-        </div>
-      <% end %>
+      </div>
     </div>
   </div>
-</div>
+</section>

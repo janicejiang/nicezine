@@ -24,6 +24,7 @@
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .alert {
@@ -129,4 +130,16 @@ h1 {
 
 .login-help{
   font-size: 12px;
+}
+
+footer {
+  .copyright {
+    text-align: center;
+    font-weight: 700;
+    color: #b9b7c6;
+    a {
+      color: rgb(245, 144, 135);
+      text-decoration: none;
+    }
+  }
 }
