@@ -18,3 +18,13 @@
 .bg-1 {
     background-color: #F8F8F8;
 }
+
+#info {
+  .padding{
+    padding: 90px 90px;
+    .btn {
+      color: rgb(245, 144, 135);
+      border: solid rgb(245, 144, 135);
+    }
+  }
+}
