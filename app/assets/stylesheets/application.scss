@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require social-share-button
  *= require_tree .
  *= require_self
  */
@@ -141,5 +142,15 @@ footer {
       color: rgb(245, 144, 135);
       text-decoration: none;
     }
+  }
+}
+
+// social_share
+$size: 24px;
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
   }
 }

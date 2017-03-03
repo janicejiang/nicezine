@@ -48,6 +48,7 @@ gem 'fog'
 gem "intercom-rails"
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
+gem 'social-share-button'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
