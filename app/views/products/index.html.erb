@@ -1,46 +1,22 @@
-<!-- <br>
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
-      <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-        <% end %>
-      <% end %>
-      <%= product.title %> ￥ <%= product.price %>
-    </div>
-  <% end %>
-</div> -->
 <section id="products">
-  <div class="wrapper">
-    <br>
-    <h1 align="center">take time to read and touch</h1>
-    <div align="center">
-      <div class="content" >
-        <div class="row">
-          <% @products.each do |product| %>
-            <div class="col-xs-3">
-              <div class="magazine">
-              <%= link_to product_path(product) do %>
-                <h3 class="h3_title"><%= product.title %></h3>
+  <div class="container">
+    <h1 class="text-center">take time to read and touch</h1>
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-sm-4 col-md-3">
+          <div class="mag">
+            <h3><%= product.title %></h3>
+            <p><%= product.description %></p>
+            <%= link_to product_path(product) do %>
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "shadow") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "shadow") %>
               <% end %>
-              <p class="summary">
-                <%= product.description %>
-              </p>
-              <%= link_to product_path(product) do %>
-                <% if product.image.present? %>
-                  <%= image_tag(product.image.rectangle.url, class: "rectangle shadow") %>
-                <% else %>
-                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-                <% end %>
-              <% end %>
-            </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </section>

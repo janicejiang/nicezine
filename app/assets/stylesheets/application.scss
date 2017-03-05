@@ -17,10 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import url(http://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 .navbar {
   border-radius: 0;
@@ -31,11 +31,6 @@
 .alert {
   border-radius: 0;
   margin-bottom: 0;
-}
-
-h1 {
-  font-family: 'Amatic SC', cursive;
-  margin-bottom: 40px;
 }
 
 /****** LOGIN MODAL ******/
@@ -132,6 +127,8 @@ h1 {
 .login-help{
   font-size: 12px;
 }
+
+// - - - - - - - - - - - - Footer Style - - - - - - - - - - - - //
 
 footer {
   .copyright {

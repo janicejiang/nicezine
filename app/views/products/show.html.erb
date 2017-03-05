@@ -1,32 +1,20 @@
 <section id="product">
-  <br>
-  <div class="wrapper">
-    <br>
-      <div class="row">
-        <div class="col-xs-9" align="center">
-          <% if @product.image.present? %>
-            <%= image_tag(@product.image.medium.url, class: "shadow") %>
-          <% else %>
-            <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "shadow") %>
-          <% end %>
-        </div>
-        <div class="col-xs-3">
-          <h2> <%= @product.title %> </h2>
-          <p><%= @product.description %></p>
-          <br>
-          <div> Quantity : <%= @product.quantity %> </div>
-          <div class="product-price"> ￥ <%= @product.price %> </div>
-          <br>
-          <div>
-            <% if @product.quantity.present? && @product.quantity > 0 %>
-            <%= link_to("Add to Cart", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-default") %>
-            <% else %>
-            Sold Out
-            <% end %>
-          </div>
-          <br>
-          <%= social_share_button_tag(@product.title) %>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-1">
+        <% if @product.image.present? %>
+          <%= image_tag(@product.image.medium.url, class: "thumbnail img-responsive") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail img-responsive") %>
+        <% end %>
       </div>
+      <div class="col-md-5">
+        <h2> <%= @product.title %> </h2>
+        <p><%= @product.description %></p>
+        <p> Quantity: <%= @product.quantity %> </p>
+        <p> ￥ <%= @product.price %> </p>
+        <%= link_to("Add to Cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-default") %>
+      </div>
+    </div>
   </div>
 </section>
