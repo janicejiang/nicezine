@@ -5,6 +5,10 @@
 #products {
   padding-top: 25px;
   background-image: url(http://oji7id3lo.bkt.clouddn.com/bg.svg);
+  h1 {
+    font-family: 'Amatic SC', cursive;
+    margin-bottom: 40px;
+  }
   .mag {
     width: 220px;
     height: 385px;
@@ -45,5 +49,8 @@
   .btn {
     color: rgb(245, 144, 135);
     border: solid rgb(245, 144, 135);
+  }
+  .shadow {
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
   }
 }
