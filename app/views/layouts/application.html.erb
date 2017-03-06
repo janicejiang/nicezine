@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>NICEZINE</title>
-        <%= csrf_meta_tags %>
-
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <title>NICEZINE</title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     </head>
 
     <body>
       <%= render "common/navbar" %>
       <%= render "common/flashes" %>
-        <%= yield %>
+      <%= yield %>
       <%= render 'common/footer' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= yield :handwrite_javascript %>
     </body>
 </html>
