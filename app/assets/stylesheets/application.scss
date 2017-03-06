@@ -41,8 +41,59 @@ footer {
     font-weight: 700;
     color: #b9b7c6;
     a {
-      color: rgb(245, 144, 135);
+      color: #b9b7c6;
       text-decoration: none;
     }
   }
+}
+
+// - - - - - - - - - - - - - Sign up - - - - - - - - - - - - - //
+
+#sign_up {
+  padding-top: 25px;
+  margin-bottom: 100px;
+  h1 {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-family: 'Amatic SC', cursive;
+  }
+  .signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    .btn {
+      background-color: rgb(124,160,186);
+      border: 1px solid transparent;
+
+    }
+    .field {
+      margin-bottom: 20px;
+    }
+  }
+  @media (min-width: 768px) {
+    .v-center {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    .container {
+      padding: 0 5%;
+      max-width: 480px;
+      width: 100%;
+    }
+    .signup-tos {
+      text-align: center;
+      max-width: 55%;
+      margin: 20px auto;
+    }
+  }
+}
+
+#login {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

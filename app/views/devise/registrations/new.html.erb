@@ -1,0 +1,47 @@
+<section id="sign_up">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1>take time to read and touch</h1>
+      </div>
+    </div>
+    <div class="row v-center">
+      <div class="col-sm-5 col-sm-offset-1">
+        <div class="signup-form">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          </div>
+          <div class="row v-center">
+            <div class="col-sm-5">
+              <div class="actions">
+                <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="signup-tos">Agree to our Terms of Service and Privacy Policy.</div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5 hidden-xs">
+        <img class="img-responsive center-block" src="http://oji7id3lo.bkt.clouddn.com/cover.jpg" alt="Profit">
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+</section>
