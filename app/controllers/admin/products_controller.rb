@@ -1,4 +1,5 @@
 class Admin::ProductsController < ApplicationController
+  before_action :find_product, only: [:edit, :update, :destroy]
   layout "admin"
 
   before_action :authenticate_user!
@@ -13,11 +14,11 @@ class Admin::ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
+    # @product = Product.find(params[:id])
   end
 
   def update
-    @product = Product.find(params[:id])
+    # @product = Product.find(params[:id])
 
     if @product.update(product_params)
       redirect_to admin_products_path
@@ -37,7 +38,7 @@ class Admin::ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
+    # @product = Product.find(params[:id])
     @product.destroy
     redirect_to admin_products_path
   end
@@ -46,5 +47,9 @@ class Admin::ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:title, :description, :quantity, :price, :image)
+  end
+
+  def find_product
+    @product = Product.find(params[:id])
   end
 end
