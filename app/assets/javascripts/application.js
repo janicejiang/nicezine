@@ -13,10 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap/alert
-//= require bootstrap/dropdown
-//= require bootstrap/carousel
-//= require bootstrap/modal
 //= require social-share-button
 //= require bootstrap-sprockets
 //= require_tree .
