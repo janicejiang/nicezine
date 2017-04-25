@@ -11,12 +11,21 @@ class User < ApplicationRecord
 
   has_many :orders
 
+  # def self.from_omniauth(auth)
+  #   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+  #     user.email = auth.info.email
+  #     user.password = Devise.friendly_token[0,20]
+  #   end
+  # end
+
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    where(email: auth.info.email).first_or_initialize.tap do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
+      user.save
     end
   end
+
 
   def self.new_with_session(params, session)
     super.tap do |user|
