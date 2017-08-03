@@ -11,10 +11,15 @@
       <div class="col-md-5">
         <h2> <%= @product.title %> </h2>
         <p><%= @product.description %></p>
-        <p> Quantity: <%= @product.quantity %> </p>
+        <p> <%= t("quantity") %>: <%= @product.quantity %> </p>
         <p> ￥ <%= @product.price %> </p>
-        <%= link_to("Add to Cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-default") %>
+        <%= link_to( t("add_to_cart"), add_to_cart_product_path(@product),
+                   method: :post, class: "btn btn-default") %>
         <%= social_share_button_tag(@product.title) %>
+
+        <%= link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-CN" %>
+        <%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %>
+
       </div>
     </div>
   </div>

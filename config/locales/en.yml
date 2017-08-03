@@ -21,3 +21,5 @@
 
 en:
   hello: "Hello world"
+  quantity: Quantity
+  add_to_cart: Add to Cart
