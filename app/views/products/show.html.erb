@@ -17,7 +17,7 @@
                    method: :post, class: "btn btn-default") %>
         <%= social_share_button_tag(@product.title) %>
 
-        <p><%= @product.created_at %></p>
+        <p><%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %></p>
 
         <%= link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-CN" %>
         <%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %>
