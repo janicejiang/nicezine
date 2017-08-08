@@ -14,7 +14,7 @@
         <p> <%= t("quantity") %>: <%= @product.quantity %> </p>
         <p> ￥ <%= @product.price %> </p>
         <%= link_to( t("add_to_cart"), add_to_cart_product_path(@product),
-                   method: :post, class: "btn btn-default") %>
+                   method: :post, class: "btn btn-default", :remote => true) %>
         <%= social_share_button_tag(@product.title) %>
 
         <p><%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %></p>
